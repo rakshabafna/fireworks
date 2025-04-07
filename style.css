@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+}
+
+h1,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 6vw;
+    padding: 0 1rem;
+    background-image: linear-gradient(to right top,
+            #ffff34,
+            #ffc812,
+            #ff8f2f,
+            #e44d2e,
+            #9e1b32);
+    background-size: 50% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 7.5s ease alternate infinite;
+}
+
+@keyframes gradientAnimation {
+    to {
+        background-position: 100% top;
+    }
+}
+
+p {
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.image-container {
+    display: flex;
+    z-index: 1;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+}
+
+img {
+    z-index: 1;
+    bottom: 5%;
+}
+
+img,
+canvas {
+    cursor: pointer;
+    position: absolute;
+}
+
+canvas {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    pointer-events: none;
+
+}
+
+#canvas-background {
+    z-index: 0;
+}
+
+#canvas-fireworks {
+    z-index: 5;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
